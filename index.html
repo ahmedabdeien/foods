@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foods</title>
+
+ <!-- links => ### All links and css bootstrap bootstrap-icon  ### -->
+    <link rel="stylesheet" href="./bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/US_Foods_logo.svg" type="image/x-icon">
+</head>
+<body>
+ <!-- sectoin loading screen => ### The beginning of the loading screen ### -->   
+   <section class="spinner w-100 vh-100  bg-stone--900 position-fixed z-index justify-content-center align-items-center">
+      <div class="lds-facebook"><div></div><div></div><div></div></div>
+   </section>
+   <section class=" spinner-data w-100 vh-100  bg-stone--900 position-fixed z-index98 justify-content-center align-items-center ">
+      <div class="lds-facebook"><div></div><div></div><div></div></div>
+   </section>
+ <!-- sectoin vab menu => ### The beginning of vab menu ### -->
+
+   <div class="nav-filll">
+      <div class="nav-item">
+         <ul class="nav-ul overflow-hidden p-0">
+            <li id="linkSearch"> Search</li>
+            <li id="linkCategories">Categories</li>
+            <li id="linkArea">Area</li>
+            <li id="linkIngredients">Ingredients</li>
+            <li id="linkContactUs">Contact Us</li>
+         </ul>
+         <div>
+            <div>
+               <i class="bi bi-facebook"></i>
+               <i class="bi bi-twitter"></i>
+               <i class="bi bi-globe-central-south-asia"></i>
+            </div>
+            <div>
+               <p>Copyright A© 2019 All Rights Reserved.</p>
+            </div>
+         </div>
+      </div>
+      <div class="nav-logo">
+      <div><img src="./images/US_Foods_logo.svg" alt="" class="img-fluid" width="50px"></div>
+      <div>
+         <div class="cursor-pointer menu-icon">
+          <i class="bi bi-list fs-2"></i>
+         </div>
+         <div class="cursor-pointer d-none close-icon">
+            <i class="bi bi-x fs-2"></i>
+         </div>
+      </div> 
+      <div class="d-flex flex-column">
+         <i class="bi bi-globe-central-south-asia fs-6"></i>
+         <i class="bi bi-cursor-fill"></i>
+      </div> 
+      </div>
+   </div>
+
+<!-- sectoin search => ### The beginning of the search ### -->
+<section id="sectoinSearch" class=" bg-stone--900 sectoin-search py-5 w-100 h-25 border border-white border-opacity-10">
+   <div class="search-closeIcon">
+      <i class="bi bi-x fs-1"></i>
+   </div>
+   <div class="container">
+      <div class="row g-3">
+         <div class="col-md-6">
+            <input class="w-100" type="text"  name="search" id="inputSearchOne" placeholder="search By Name">
+         </div>
+         <div class="col-md-6">
+            <input class="w-100" type="text" maxlength="1" name="search" id="inputSearchTwo" placeholder="Search By First Letter" >
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<!-- sectoin all => ### The beginning of the all ### -->
+<section class="sectoin sectoin-Area py-5 ">
+   <div class="container">
+      <div id="rowBodyData" class="row g-3 ">
+
+      </div>
+   </div>
+</section>
+
+<!-- sectoin Contact Us => ### The beginning of the Contact Us ### -->
+<section id="sectoinContactUs" class="sectoin-Contact-Us p-5 w-100 vh-100 d-flex align-items-center">
+   <div class="contact-closeIcon">
+      <i class="bi bi-x fs-1"></i>
+   </div>
+  <div class="container">
+   <div class="row g-3">
+     <div class="col-md-6">
+      <input id="inputName" onkeyup="inputsValidation()" class="w-100" type="text" name="name" placeholder="Enter Your Name">
+      <p id="warningName" class="warning warning-name w-100 p-3 rounded-1 mt-2 d-none">Special characters and numbers not allowed</p>
+     </div>
+     <div class="col-md-6">
+      <input id="inputEmail" onkeyup="inputsValidation()" class="w-100" type="email" name="email" placeholder="Enter Your Email">
+      <p id="warningEmail" class="warning warning-Email w-100 rounded-1 p-3 mt-2 d-none">Email not valid *exemple@yyy.zzz</p>
+     </div>
+     <div class="col-md-6">
+      <input id="inputPhone" onkeyup="inputsValidation()" class="w-100" type="text" name="phone"  placeholder="Enter Your Phone">
+      <p id="warningPhone" class="warning warning-Phone w-100 rounded-1 p-3 mt-2 d-none">Enter valid Phone Number</p>
+     </div>
+     <div class="col-md-6">
+      <input id="inputAge" onkeyup="inputsValidation()" class="w-100" type="number" name="age" placeholder="Enter Your Age">
+      <p id="warningAge" class="warning warning-Age w-100 rounded-1 p-3 mt-2 d-none">Enter valid age</p>
+     </div>
+     <div class="col-md-6">
+      <input id="inputPassword" onkeyup="inputsValidation()" class="w-100" type="password" name="password"  placeholder="Enter Your Password">
+      <p id="warningPassword" class="warning warning-Password w-100 rounded-1 p-3 mt-2 d-none">Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+     </div>
+     <div class="col-md-6">
+      <input id="inputRePassword" class="w-100" onkeyup="inputsValidation()" type="password" name="password" placeholder="RePassword">
+      <p  id="warningRePassword" class="warning warning-RePassword w-100 rounded-1 p-3 mt-2 d-none">Enter valid repassword</p>
+   </div>
+     <div class="col-12 mt-4">
+      <button id="button-btnSubmit" class="button-btn" disabled>Submit Data</button>
+     </div>
+   </div>
+  </div>
+</section>
+
+
+
+
+
+
+   <script src="./js/jquery-3.7.0.min.js"></script>
+   <script src="./js/bootstrap.bundle.min.js"></script>
+   <script src="./js/index.js"></script>
+</body>
+</html>   
